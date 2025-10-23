@@ -1,0 +1,137 @@
+.header {
+	width: 600px;
+	display: flex;
+	justify-content: space-between;
+	user-select: none;
+	padding-left: 25px;
+}
+
+.body {
+	width: 650px;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.body p {
+	text-align: center;
+	color: gray;
+	user-select: none;
+	background-color: lightgoldenrodyellow;
+	border-radius: 10px;
+}
+
+.newSection{
+	background: lightgoldenrodyellow;
+	padding: 30px 20px 40px;
+	border-radius: 10px;
+	position: relative;
+}
+
+.hr {
+	position: absolute;
+	width: 500px;
+	bottom: 0px;
+	left: 55px;
+	border: none;
+	border-top: 1px solid black;
+}
+
+.buttons {
+	position: absolute;
+	right: 20px;
+	bottom: 15px;
+}
+
+.buttons :last-child {
+	margin-left: 20px;
+}
+
+.sectionTop {
+	display: flex;
+	column-gap: 20px;
+	margin-bottom: 10px;
+}
+
+.sectionTop input {
+	flex-grow: 1;
+}
+
+.sectionBottom {
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+	width: 48%;
+}
+
+.sectionBottom input {
+	flex-shrink: 1;
+	width: 100%;
+}
+
+.dash {
+	width: 15px;
+	height: 2px;
+	background-color: gray;
+}
+
+.warning {
+	text-align: center;
+	user-select: none;
+	padding-top: 10px;
+}
+
+/* ---------------------------------------Experience----------------------------------------- */
+
+.dutiesSection {
+	display: flex;
+	margin: 15px 0 0 20px;
+}
+
+.duties {
+	flex-grow: 1;
+	color: gray;
+}
+
+.duty {
+	margin: 0 0 10px 20px;
+}
+
+.duty input {
+	margin: 0 5px;
+	width: 80%;
+}
+
+
+@media (max-width: 720px) {
+	.header {
+		width: 300px;
+	}
+
+	.body {
+		width: 360px;
+	}
+
+	.sectionTop,
+	.sectionBottom {
+		flex-direction: column;
+		row-gap: 10px;
+	}
+
+	.dash {
+		display: none;
+	}
+
+	.dutiesSection {
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.duty {
+		margin-left: 10px;
+	}
+
+	.dutiesSection p {
+		margin-bottom: 5px;
+	}
+}

@@ -1,0 +1,74 @@
+.summary {
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.summary textarea {
+	width: 570px;
+	margin: 20px;
+	padding: 10px 15px;
+	border-radius: 10px;
+	font-size: 16px;
+	outline: none;
+	border: none;
+	resize: none;
+	overflow: hidden;
+	background-color: lightgoldenrodyellow;
+}
+
+.summary textarea::placeholder {
+	text-align: center;
+}
+
+.skillsWrapper {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+.skillsBG {
+	display: flex;
+	margin: 20px;
+	padding: 10px 10px 0;
+	border-radius: 10px;
+	background-color: lightgoldenrodyellow;
+}
+
+.skillsBG p {
+	margin-bottom: 10px;
+}
+
+.skillsSection:first-child {
+	width: 80%;
+}
+
+.skill {
+	margin: 0 0 10px;
+}
+
+.skill input {
+	width: 80%;
+	margin: 0 5px;
+}
+
+.skill span {
+	color: gray;
+}
+
+@media (max-width: 720px) {
+	.summary textarea {
+		width: 280px;
+	}
+
+	.skillsBG {
+		flex-direction: column;
+	}
+
+	.skillsSection:first-child {
+		width: 100%;
+	}
+
+	.skillsBG {
+		padding-left: 20px;
+	}
+}

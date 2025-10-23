@@ -1,0 +1,216 @@
+/* -------------------------------General Selectors----------------------------- */
+
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type="color"] {
+  width: 37px;
+  height: 37px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  z-index: -1;
+  cursor: pointer;
+}
+
+input {
+	border-radius: 10px;
+	border: 1px solid gray;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	height: 30px;
+	padding: 0 10px;
+	font-size: 16px;
+	outline: none;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.invalid {
+	border: 1px solid coral;
+}
+
+.add {
+	background: url(../assets/more.png) center / cover;
+	width: 25px;
+	height: 25px;
+	border: none;
+	cursor: pointer;
+}
+
+.remove {
+	background: url(../assets/trash.png) center / cover;
+	width: 25px;
+	height: 25px;
+	border: none;
+	cursor: pointer;
+}
+
+.addItem {
+	display: block;
+	margin-left: 35px;
+	background: url(../assets/addDuty.png) center / cover;
+	width: 24px;
+	height: 24px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.7;
+	margin-top: 5px;
+}
+
+.removeItem {
+	background: url(../assets/removeDuty.png) center / cover;
+	width: 16px;
+	height: 16px;
+	border: none;
+	cursor: pointer;
+	vertical-align: middle;
+	opacity: 0.7;
+}
+
+.add:active,
+.remove:active,
+.addItem:active {
+	transform: scale(0.95);
+}
+
+.removeItem:active {
+	transform: scale(0.9);
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.cvHeader {
+	width: 100vw;
+	height: 75px;
+	background-color: lightgoldenrodyellow;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	user-select: none;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+}
+
+.cvHeader h1 {
+	grid-column: 2;
+	display: flex;
+	align-items: center;
+}
+
+.controls {
+	grid-column: 3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30% 0 20px;
+} 
+
+.saveModeBtns {
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+}
+
+.colorWrapper {
+	position: relative;
+	transition: 0.2s;
+}
+
+.colorWrapper:hover {
+	transform: scale(1.1);
+}
+
+.colorPicker {
+	width: 40px;
+	height: 40px;
+	background: url(../assets/pallete.png) center / contain;
+	pointer-events: none;
+}
+
+.cvHeader button {
+	width: 32px;
+	height: 32px;
+	border: none;
+	cursor: pointer;
+}
+
+.cvHeader button:hover {
+	transform: scale(1.1);
+	transition: 0.2s;
+}
+
+.print {
+	background: url(../assets/download.png) center / cover;
+	filter: contrast(60%);
+}
+
+.save {	
+	background: url(../assets/save.png) center / cover;
+}
+
+.edit {
+	background: url(../assets/edit.png) center / cover;
+}
+
+.cv {
+  width: 700px;
+  margin: 125px auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 25px;
+  row-gap: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 720px) {
+	.cv {
+		width: 410px;
+	}
+
+	.cvHeader {
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.cvHeader h1 {
+		grid-row: 1;
+		font-size: 24px;
+	}
+
+	.controls {
+		grid-column: 2;
+		grid-row: 2;
+		justify-content: center;
+		column-gap: 20px;
+		padding: 0;
+	}
+
+	.cvHeader button {
+		width: 24px;
+		height: 24px;
+	}
+
+	.colorPicker {
+		width: 32px;
+		height: 32px;
+	}
+
+	input[type="color"] {
+		width: 30px;
+		height: 30px;
+		left: 2px;
+	}
+}
+
